@@ -1,0 +1,460 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* Shared plain professional theme for the directory and doctor profile. */
+.doctor-reference-profile,
+.home-reference-directory {
+  --medical-navy: #14515B;
+  --medical-navy-dark: #0B343B;
+  --medical-blue: #19A38C;
+  --medical-teal: #C96F5B;
+  --medical-bg: #F5F9F7;
+  --medical-soft: #EAF4F0;
+  --medical-border: #D3E3DD;
+  --medical-text: #405B57;
+}
+
+/* Doctor profile */
+.doctor-reference-profile {
+  background: #fff;
+  color: var(--medical-text);
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.doctor-reference-profile > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0 !important;
+}
+
+.doctor-reference-profile > section {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+
+.doctor-reference-profile > section:first-child {
+  max-width: none !important;
+  padding: 0 !important;
+  background: var(--medical-navy);
+}
+
+.doctor-reference-profile > section:first-child > div {
+  max-width: 76rem;
+  min-height: 610px;
+  margin: 0 auto;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-top: 4.5rem !important;
+  padding-bottom: 6.5rem !important;
+}
+
+.doctor-reference-profile > section:first-child h1 {
+  font-size: clamp(2.75rem, 5.5vw, 4.75rem) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.04em !important;
+}
+
+.doctor-reference-profile > section:first-child h1 + p {
+  color: #8DD3C2 !important;
+}
+
+.doctor-reference-profile > section:first-child .lg\:col-span-8 > div:first-child {
+  border-color: rgba(255,255,255,.2) !important;
+  border-radius: 6px !important;
+  background: rgba(255,255,255,.07) !important;
+  color: #BCE8DC !important;
+}
+
+.doctor-reference-profile > section:first-child .lg\:col-span-8 > div:nth-of-type(3) span {
+  border-color: rgba(255,255,255,.14) !important;
+  border-radius: 6px !important;
+  background: rgba(255,255,255,.06) !important;
+}
+
+.doctor-reference-profile > section:first-child .lg\:col-span-8 > div:last-child a {
+  border-radius: 7px !important;
+}
+
+.doctor-reference-profile > section:first-child .lg\:col-span-8 > div:last-child a:first-child {
+  background: var(--medical-blue) !important;
+}
+
+.doctor-reference-profile > section:first-child .lg\:col-span-4 {
+  border: 1px solid rgba(255,255,255,.18) !important;
+  border-radius: 12px !important;
+  background: rgba(5,40,43,.45) !important;
+  box-shadow: none !important;
+}
+
+.doctor-reference-profile > section:first-child .lg\:col-span-4 .relative {
+  border-radius: 8px !important;
+}
+
+.doctor-reference-profile > section:nth-child(2) {
+  padding-top: 5.5rem;
+}
+
+.doctor-reference-profile > section:nth-child(2) h2,
+.doctor-reference-profile > section:nth-child(4) h2,
+.doctor-reference-profile > section:nth-child(5) h2 {
+  color: var(--medical-navy) !important;
+  font-size: clamp(2rem, 3.5vw, 3rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.03em;
+}
+
+.doctor-reference-profile > section:nth-child(2) > div:last-child {
+  gap: 1rem !important;
+}
+
+.doctor-reference-profile > section:nth-child(2) > div:last-child > div {
+  min-height: 350px;
+  border-color: var(--medical-border) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+.doctor-reference-profile > section:nth-child(2) > div:last-child > div:hover {
+  border-color: #9FC5B9 !important;
+  box-shadow: 0 10px 28px rgba(20,81,91,.08) !important;
+}
+
+.doctor-reference-profile > section:nth-child(2) h3 {
+  color: var(--medical-navy) !important;
+}
+
+.doctor-reference-profile > section:nth-child(2) span {
+  border-radius: 5px !important;
+}
+
+.doctor-reference-profile > section:nth-child(3) {
+  background: var(--medical-bg);
+  box-shadow: 0 0 0 100vmax var(--medical-bg);
+  clip-path: inset(0 -100vmax);
+}
+
+.doctor-reference-profile > section:nth-child(3) > div {
+  border-color: var(--medical-border) !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+}
+
+.doctor-reference-profile > section:nth-child(3) h3 {
+  color: var(--medical-navy) !important;
+}
+
+.doctor-reference-profile > section:nth-child(3) p {
+  color: #4C6762 !important;
+}
+
+.doctor-reference-profile > section:nth-child(3) span {
+  border-radius: 5px !important;
+  background: var(--medical-soft) !important;
+  color: var(--medical-blue) !important;
+}
+
+.doctor-reference-profile > section:nth-child(4) .lg\:col-span-7 {
+  border-color: var(--medical-border) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.doctor-reference-profile > section:nth-child(4) h3,
+.doctor-reference-profile > section:nth-child(4) h4 {
+  color: var(--medical-navy) !important;
+}
+
+.doctor-reference-profile > section:nth-child(4) .bg-blue-600 {
+  background: var(--medical-blue) !important;
+}
+
+.doctor-reference-profile > section:nth-child(5) {
+  background: var(--medical-bg);
+  box-shadow: 0 0 0 100vmax var(--medical-bg);
+  clip-path: inset(0 -100vmax);
+}
+
+.doctor-reference-profile > section:nth-child(5) > div {
+  border-color: var(--medical-border) !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+}
+
+.doctor-reference-profile > section:nth-child(5) > div > div:nth-child(2) > div {
+  border-color: var(--medical-border) !important;
+  border-radius: 7px !important;
+}
+
+.doctor-reference-profile > section:nth-child(5) > div > div:nth-child(2) span:first-child {
+  background: var(--medical-blue) !important;
+  color: #fff !important;
+}
+
+.doctor-reference-profile > section:nth-child(6) {
+  max-width: none !important;
+  padding: 5.5rem max(1rem, calc((100vw - 72rem) / 2)) !important;
+  background: var(--medical-navy-dark);
+}
+
+.doctor-reference-profile > section:nth-child(6) > div {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.doctor-reference-profile > section:nth-child(6) .bg-slate-800 {
+  border-color: rgba(255,255,255,.16) !important;
+  border-radius: 10px !important;
+  background: rgba(255,255,255,.05) !important;
+}
+
+.doctor-reference-profile > section:nth-child(6) a {
+  border-radius: 7px !important;
+}
+
+.doctor-reference-profile > section:nth-child(6) a.bg-emerald-600 {
+  background: var(--medical-blue) !important;
+}
+
+/* Directory homepage */
+.home-reference-directory {
+  background: var(--medical-bg);
+  padding-bottom: 6.5rem !important;
+  overflow: hidden;
+}
+
+.home-reference-directory > section:first-child {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  border: 0 !important;
+  padding-top: 5.5rem !important;
+  padding-bottom: 8.5rem !important;
+  background: var(--medical-navy);
+}
+
+.home-reference-directory > section:first-child > div {
+  width: 100%;
+  max-width: 76rem;
+}
+
+.home-reference-directory > section:first-child > div > div {
+  max-width: 850px !important;
+}
+
+.home-reference-directory > section:first-child h1 {
+  margin-top: 1.25rem;
+  font-size: clamp(2.6rem, 5vw, 4.6rem) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.04em !important;
+  text-wrap: balance;
+}
+
+.home-reference-directory > section:first-child h1 + p {
+  max-width: 720px;
+  margin-top: 1.5rem;
+  color: #D1E3DE !important;
+  line-height: 1.8 !important;
+}
+
+.home-reference-directory > section:first-child .inline-flex {
+  border-color: rgba(255,255,255,.2) !important;
+  border-radius: 6px !important;
+  background: rgba(255,255,255,.07) !important;
+  color: #BCE8DC !important;
+}
+
+.home-reference-directory > section:first-child .inline-flex svg {
+  color: #57C4AC !important;
+}
+
+.home-reference-directory > main {
+  max-width: 72rem;
+  margin-top: -4rem !important;
+}
+
+.home-reference-directory > main > div:first-child {
+  margin-bottom: 4.5rem !important;
+  border-color: var(--medical-border) !important;
+  border-radius: 12px !important;
+  padding: 1rem !important;
+  box-shadow: 0 14px 35px rgba(20,81,91,.11) !important;
+}
+
+.home-reference-directory > main > div:first-child input {
+  border-radius: 8px !important;
+  background: #F7FAF8 !important;
+  padding-top: .9rem !important;
+  padding-bottom: .9rem !important;
+}
+
+.home-reference-directory > main > div:first-child input:focus {
+  border-color: var(--medical-blue) !important;
+  box-shadow: 0 0 0 2px rgba(25,163,140,.15) !important;
+}
+
+.home-reference-directory > main > div:first-child .bg-slate-100 {
+  border-radius: 8px !important;
+  background: var(--medical-soft) !important;
+}
+
+.home-reference-directory > main > div:first-child button {
+  border-radius: 6px !important;
+}
+
+.home-reference-directory .directory-section-heading {
+  margin-bottom: 2rem !important;
+}
+
+.home-reference-directory .directory-section-heading span:first-child {
+  background: var(--medical-blue) !important;
+}
+
+.home-reference-directory .directory-section-heading span:last-child {
+  color: var(--medical-blue) !important;
+}
+
+.home-reference-directory .directory-section-heading h2 {
+  color: var(--medical-navy) !important;
+  font-size: clamp(2rem, 3.5vw, 3rem) !important;
+  line-height: 1.1;
+  letter-spacing: -.035em;
+}
+
+.home-reference-directory main > .grid {
+  gap: 1.5rem !important;
+}
+
+.home-reference-directory main article {
+  min-height: 475px;
+  border-color: var(--medical-border) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  box-shadow: none !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+.home-reference-directory main article:hover {
+  border-color: #9FC5B9 !important;
+  box-shadow: 0 12px 30px rgba(20,81,91,.08) !important;
+}
+
+.home-reference-directory main article h2 {
+  color: var(--medical-navy) !important;
+  letter-spacing: -.02em;
+}
+
+.home-reference-directory main article > div:first-child > div:first-child > span {
+  border-radius: 5px !important;
+}
+
+.home-reference-directory main article .relative.w-13,
+.home-reference-directory main article .w-13 {
+  width: 4rem !important;
+  height: 4rem !important;
+  border-radius: 8px !important;
+}
+
+.home-reference-directory main article .bg-slate-100\/90 {
+  border: 1px solid var(--medical-border);
+  border-radius: 6px !important;
+  background: #f7fafb !important;
+}
+
+.home-reference-directory main article > div:last-child a {
+  border-radius: 7px !important;
+  padding-top: .95rem !important;
+  padding-bottom: .95rem !important;
+  box-shadow: none !important;
+}
+
+.home-reference-directory main article > div:last-child a.bg-blue-600 {
+  background: var(--medical-blue) !important;
+}
+
+.home-reference-directory main article > div:last-child a.bg-teal-700 {
+  background: var(--medical-teal) !important;
+}
+
+.home-reference-directory main > .bg-white:not(article) {
+  border-radius: 12px !important;
+}
+
+body:has(.home-reference-directory) footer,
+body:has(.doctor-reference-profile) footer {
+  background: #082F34 !important;
+}
+
+@media (max-width: 1023px) {
+  .doctor-reference-profile > section:first-child > div {
+    min-height: auto;
+    padding-top: 4rem !important;
+    padding-bottom: 5.5rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .doctor-reference-profile > section,
+  .home-reference-directory > section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .doctor-reference-profile > section:first-child > div {
+    padding-top: 3.5rem !important;
+  }
+
+  .doctor-reference-profile > section:first-child .lg\:col-span-8 > div:last-child a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .doctor-reference-profile > section:nth-child(2) > div:last-child > div,
+  .home-reference-directory main article {
+    min-height: auto;
+  }
+
+  .home-reference-directory > section:first-child {
+    min-height: 405px;
+    padding-top: 4rem !important;
+    padding-bottom: 7rem !important;
+  }
+
+  .home-reference-directory > main {
+    margin-top: -3rem !important;
+  }
+
+  .home-reference-directory > main > div:first-child {
+    margin-bottom: 3.75rem !important;
+    padding: .75rem !important;
+  }
+
+  .home-reference-directory main article {
+    padding: 1.5rem !important;
+  }
+}
