@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/data/translations";
 import {
-  FlaskConical,
   Star,
   ShieldCheck,
   Clock,
@@ -124,13 +124,20 @@ export default function PathologyPage() {
 
             {/* Right Card: Quick Lab Stats */}
             <div className="lg:col-span-4 bg-slate-800/90 rounded-2xl p-6 border border-slate-700 shadow-inner space-y-4">
-              <div className="flex items-center gap-3 pb-3 border-b border-slate-700">
-                <div className="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center font-bold">
-                  <FlaskConical className="w-6 h-6" />
+              <div className="space-y-3 pb-3 border-b border-slate-700">
+                <div className="relative w-full h-44 rounded-xl overflow-hidden bg-slate-900">
+                  <Image
+                    src="/images/unity-pathology-logo.jpg"
+                    alt="Unity Pathology Laboratory"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 320px"
+                    className="object-cover"
+                    priority
+                  />
                 </div>
-                <div>
+                <div className="flex items-center justify-between">
                   <h3 className="font-bold text-white text-base">Unity Pathology Lab</h3>
-                  <p className="text-xs text-amber-300 font-semibold">⭐ 5.0 (60 Google Reviews)</p>
+                  <p className="text-xs text-amber-300 font-semibold">⭐ 5.0</p>
                 </div>
               </div>
 

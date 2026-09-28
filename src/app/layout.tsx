@@ -49,6 +49,14 @@ export const metadata: Metadata = {
     description:
       "5.0★ Rated Diagnostic Pathology Services in Sarkhej & Makarba, Ahmedabad — verified clinical testing with same-day reports and home sample collection.",
     siteName: "Unity Pathology Laboratory",
+    images: [
+      {
+        url: "/images/unity-pathology-logo.jpg",
+        width: 1254,
+        height: 1254,
+        alt: "Unity Pathology Laboratory",
+      },
+    ],
   },
   robots: {
     index: true,
