@@ -125,13 +125,13 @@ export default function PathologyPage() {
             {/* Right Card: Quick Lab Stats */}
             <div className="lg:col-span-4 bg-slate-800/90 rounded-2xl p-6 border border-slate-700 shadow-inner space-y-4">
               <div className="space-y-3 pb-3 border-b border-slate-700">
-                <div className="relative w-full h-44 rounded-xl overflow-hidden bg-slate-900">
+                <div className="relative w-full h-44 rounded-xl overflow-hidden bg-white">
                   <Image
-                    src="/images/unity-pathology-logo.jpg"
+                    src="/images/unity-pathology-logo.png"
                     alt="Unity Pathology Laboratory"
                     fill
                     sizes="(max-width: 1024px) 100vw, 320px"
-                    className="object-cover"
+                    className="object-contain p-3"
                     priority
                   />
                 </div>
@@ -337,7 +337,7 @@ export default function PathologyPage() {
                         <strong className="text-slate-700">{isGu ? "સેમ્પલ:" : "Sample:"}</strong> {test.sample}
                       </p>
                       <div className="flex items-center gap-1.5">
-                        <strong className="text-slate-700">{isGu ? "ફાસ્ટિંગ:" : "Fasting:"}</strong>
+                        <strong className="text-slate-700">{isGu ? "તૈયારી:" : "Preparation:"}</strong>
                         {isFastingReq ? (
                           <span className="font-bold text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
                             {test.fasting}

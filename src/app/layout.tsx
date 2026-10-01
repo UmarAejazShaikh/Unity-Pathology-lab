@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Unity Pathology Laboratory",
     images: [
       {
-        url: "/images/unity-pathology-logo.jpg",
+        url: "/images/unity-pathology-logo.png",
         width: 1254,
         height: 1254,
         alt: "Unity Pathology Laboratory",

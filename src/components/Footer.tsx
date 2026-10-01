@@ -93,7 +93,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-teal-400" />
-                <span>Coagulation Profile (PT, INR, aPTT) — ₹600</span>
+                <span>Coagulation Profile (PT, INR, aPTT) — ₹700</span>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-teal-400" />

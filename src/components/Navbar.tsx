@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import {
-  FlaskConical,
   Phone,
   MessageCircle,
   Menu,
@@ -39,9 +39,16 @@ export default function Navbar() {
           <div className="flex items-center gap-1.5 sm:gap-3 min-w-0">
             <Link
               href="/"
-              className="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-teal-700 text-white flex items-center justify-center shadow-sm flex-shrink-0"
+              className="relative w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center shadow-sm flex-shrink-0 overflow-hidden"
             >
-              <FlaskConical className="w-4 h-4 sm:w-6 sm:h-6" />
+              <Image
+                src="/images/unity-pathology-logo.png"
+                alt="Unity Pathology Laboratory logo"
+                fill
+                sizes="48px"
+                className="object-contain p-0.5"
+                priority
+              />
             </Link>
             <div className="flex flex-col min-w-0">
               <Link

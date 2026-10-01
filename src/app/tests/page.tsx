@@ -142,7 +142,7 @@ function TestsCatalog() {
                       <strong className="text-slate-700">{isGu ? "સેમ્પલ:" : "Sample:"}</strong> {test.sample}
                     </p>
                     <p>
-                      <strong className="text-slate-700">{isGu ? "ફાસ્ટિંગ:" : "Fasting:"}</strong> {test.fasting}
+                      <strong className="text-slate-700">{isGu ? "તૈયારી:" : "Preparation:"}</strong> {test.fasting}
                     </p>
                   </div>
                 </div>

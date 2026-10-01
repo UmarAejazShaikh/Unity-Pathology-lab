@@ -232,7 +232,7 @@ export const translations = {
           id: "mp-card",
           name: "MP Card (Malaria Antigen Test)",
           category: "Routine",
-          sample: "Random Blood Sample",
+          sample: "EDTA Whole Blood",
           fasting: "Fasting Not Required",
           tat: "Same Day (1 Hour)",
           desc: "Rapid card test to detect malaria parasite antigen during fever.",
@@ -282,7 +282,7 @@ export const translations = {
           id: "hba1c",
           name: "HbA1c (Glycated Hemoglobin)",
           category: "Diabetes",
-          sample: "Blood",
+          sample: "EDTA Whole Blood",
           fasting: "Fasting Not Required",
           tat: "Same Day (4 Hours)",
           desc: "Gold standard test measuring your average 3-month blood sugar levels. Essential for diabetes diagnosis and monitoring.",
@@ -303,7 +303,7 @@ export const translations = {
           name: "Post-Prandial Blood Sugar (PPBS)",
           category: "Diabetes",
           sample: "Blood",
-          fasting: "Fasting Not Required",
+          fasting: "Sample 2 Hours After Lunch",
           tat: "Same Day",
           desc: "Checks how effectively the body processes sugar after a meal.",
           price: "₹50"
@@ -366,7 +366,7 @@ export const translations = {
           fasting: "Fasting Not Required (Random)",
           tat: "Same Day",
           desc: "Individual liver enzyme test used alongside SGPT for liver assessment.",
-          price: "₹100"
+          price: "₹200"
         },
         {
           id: "bilirubin",
@@ -376,7 +376,7 @@ export const translations = {
           fasting: "Fasting Not Required (Random)",
           tat: "Same Day",
           desc: "Detects jaundice and liver/bile duct dysfunction.",
-          price: "₹100"
+          price: "₹250"
         },
         {
           id: "cholesterol",
@@ -403,7 +403,7 @@ export const translations = {
           name: "TSH (Thyroid Stimulating Hormone)",
           category: "Thyroid & Hormonal",
           sample: "Serum Blood",
-          fasting: "Fasting Not Required",
+          fasting: "Fasting Required",
           tat: "Same Day",
           desc: "Primary screening test for thyroid gland function.",
           price: "₹250"
@@ -413,7 +413,7 @@ export const translations = {
           name: "Free T3",
           category: "Thyroid & Hormonal",
           sample: "Serum Blood",
-          fasting: "Fasting Not Required",
+          fasting: "Fasting Required",
           tat: "Same Day",
           desc: "Measures active thyroid hormone level.",
           price: "₹300"
@@ -423,7 +423,7 @@ export const translations = {
           name: "Free T4",
           category: "Thyroid & Hormonal",
           sample: "Serum Blood",
-          fasting: "Fasting Not Required",
+          fasting: "Fasting Required",
           tat: "Same Day",
           desc: "Measures active thyroid hormone level alongside Free T3.",
           price: "₹300"
@@ -514,7 +514,7 @@ export const translations = {
           category: "Infection Screening",
           sample: "Serum Blood",
           fasting: "Fasting Not Required",
-          tat: "Same Day",
+          tat: "24 Hours",
           desc: "Detects antibodies against typhoid-causing Salmonella bacteria.",
           price: "₹150"
         },
@@ -699,7 +699,7 @@ export const translations = {
           name: "Thyroid Profile — Full Panel (T3, T4, TSH)",
           category: "Full Body Packages",
           sample: "Serum Blood",
-          fasting: "Fasting Not Required",
+          fasting: "Fasting Required",
           tat: "Same Day (5 Hours)",
           desc: "Complete thyroid panel bundling T3, T4, and TSH in one report to detect hypothyroidism or hyperthyroidism.",
           price: "₹550",
@@ -714,7 +714,7 @@ export const translations = {
           fasting: "Fasting Not Required",
           tat: "Same Day (4 Hours)",
           desc: "Complete coagulation panel bundling Prothrombin Time (PT), INR, and Activated Partial Thromboplastin Time (aPTT) to assess blood clotting before surgery or in bleeding disorders.",
-          price: "₹600",
+          price: "₹700",
           isPackage: true,
           includes: ["PT (Prothrombin Time)", "INR", "aPTT"]
         },
@@ -726,7 +726,7 @@ export const translations = {
           fasting: "Fasting Not Required",
           tat: "Same Day",
           desc: "Complete dengue panel bundling NS1 Antigen, IgM, and IgG antibodies for accurate staging of infection.",
-          price: "₹1600",
+          price: "₹1800",
           isPackage: true,
           includes: ["Dengue NS1 Antigen", "Dengue IgM", "Dengue IgG"]
         },
@@ -1030,7 +1030,7 @@ export const translations = {
           id: "mp-card",
           name: "MP કાર્ડ (મેલેરિયા ટેસ્ટ)",
           category: "Routine",
-          sample: "રેન્ડમ બ્લડ સેમ્પલ",
+          sample: "EDTA હોલ બ્લડ",
           fasting: "ફાસ્ટિંગ જરૂરી નથી",
           tat: "તે જ દિવસે (૧ કલાકમાં)",
           desc: "તાવ આવે ત્યારે મેલેરિયાના પરોપજીવીની ઝડપી કાર્ડ તપાસ.",
@@ -1080,7 +1080,7 @@ export const translations = {
           id: "hba1c",
           name: "HbA1c (છેલ્લા ૩ મહિનાની ડાયાબિટીસ સરેરાશ)",
           category: "Diabetes",
-          sample: "બ્લડ સેમ્પલ",
+          sample: "EDTA હોલ બ્લડ",
           fasting: "ફાસ્ટિંગ જરૂરી નથી",
           tat: "તે જ દિવસે (૪ કલાકમાં)",
           desc: "ડાયાબિટીસ કંટ્રોલમાં છે કે નહીં તે જાણવા માટેનો સૌથી મહત્વપૂર્ણ અને સચોટ ટેસ્ટ.",
@@ -1101,7 +1101,7 @@ export const translations = {
           name: "પોસ્ટ-પ્રાન્ડિયલ બ્લડ સુગર (PPBS)",
           category: "Diabetes",
           sample: "બ્લડ",
-          fasting: "ફાસ્ટિંગ જરૂરી નથી",
+          fasting: "બપોરના ભોજન પછી ૨ કલાકે સેમ્પલ",
           tat: "તે જ દિવસે",
           desc: "જમ્યા પછી શરીર સુગરને કેટલી અસરકારક રીતે પ્રોસેસ કરે છે તે ચકાસવા માટે.",
           price: "₹50"
@@ -1164,7 +1164,7 @@ export const translations = {
           fasting: "ફાસ્ટિંગ જરૂરી નથી (રેન્ડમ)",
           tat: "તે જ દિવસે",
           desc: "લિવરના મૂલ્યાંકન માટે SGPT સાથે ઉપયોગમાં લેવાતો વ્યક્તિગત લિવર એન્ઝાઇમ ટેસ્ટ.",
-          price: "₹100"
+          price: "₹200"
         },
         {
           id: "bilirubin",
@@ -1174,7 +1174,7 @@ export const translations = {
           fasting: "ફાસ્ટિંગ જરૂરી નથી (રેન્ડમ)",
           tat: "તે જ દિવસે",
           desc: "કમળો અને લિવર/પિત્તાશયની નળીની તકલીફ શોધવા માટે.",
-          price: "₹100"
+          price: "₹250"
         },
         {
           id: "cholesterol",
@@ -1201,7 +1201,7 @@ export const translations = {
           name: "TSH (થાયરોઇડ સ્ટિમ્યુલેટિંગ હોર્મોન)",
           category: "Thyroid & Hormonal",
           sample: "સીરમ બ્લડ",
-          fasting: "ફાસ્ટિંગ જરૂરી નથી",
+          fasting: "ફાસ્ટિંગ જરૂરી",
           tat: "તે જ દિવસે",
           desc: "થાયરોઇડ ગ્રંથિની કામગીરી માટેનો પ્રાથમિક સ્ક્રીનીંગ ટેસ્ટ.",
           price: "₹250"
@@ -1211,7 +1211,7 @@ export const translations = {
           name: "ફ્રી T3",
           category: "Thyroid & Hormonal",
           sample: "સીરમ બ્લડ",
-          fasting: "ફાસ્ટિંગ જરૂરી નથી",
+          fasting: "ફાસ્ટિંગ જરૂરી",
           tat: "તે જ દિવસે",
           desc: "સક્રિય થાયરોઇડ હોર્મોનનું સ્તર માપે છે.",
           price: "₹300"
@@ -1221,7 +1221,7 @@ export const translations = {
           name: "ફ્રી T4",
           category: "Thyroid & Hormonal",
           sample: "સીરમ બ્લડ",
-          fasting: "ફાસ્ટિંગ જરૂરી નથી",
+          fasting: "ફાસ્ટિંગ જરૂરી",
           tat: "તે જ દિવસે",
           desc: "ફ્રી T3 સાથે સક્રિય થાયરોઇડ હોર્મોનનું સ્તર માપે છે.",
           price: "₹300"
@@ -1312,7 +1312,7 @@ export const translations = {
           category: "Infection Screening",
           sample: "સીરમ બ્લડ",
           fasting: "ફાસ્ટિંગ જરૂરી નથી",
-          tat: "તે જ દિવસે",
+          tat: "૨૪ કલાક",
           desc: "ટાઇફોઇડ કરતા સાલ્મોનેલા બેક્ટેરિયા સામેની એન્ટિબોડી શોધે છે.",
           price: "₹150"
         },
@@ -1497,7 +1497,7 @@ export const translations = {
           name: "થાયરોઇડ પ્રોફાઇલ — ફૂલ પેનલ (T3, T4, TSH)",
           category: "Full Body Packages",
           sample: "સીરમ બ્લડ",
-          fasting: "ફાસ્ટિંગ જરૂરી નથી",
+          fasting: "ફાસ્ટિંગ જરૂરી",
           tat: "તે જ દિવસે (૫ કલાકમાં)",
           desc: "હાઇપોથાયરોડિઝમ કે હાઇપરથાયરોડિઝમ શોધવા T3, T4 અને TSH એક જ રિપોર્ટમાં.",
           price: "₹550",
@@ -1512,7 +1512,7 @@ export const translations = {
           fasting: "ફાસ્ટિંગ જરૂરી નથી",
           tat: "તે જ દિવસે (૪ કલાકમાં)",
           desc: "સર્જરી પહેલા અથવા બ્લીડિંગ ડિસઓર્ડરમાં લોહી ગંઠાવાની ક્ષમતા ચકાસવા PT, INR અને aPTT એક જ રિપોર્ટમાં.",
-          price: "₹600",
+          price: "₹700",
           isPackage: true,
           includes: ["PT (પ્રોથ્રોમ્બિન ટાઇમ)", "INR", "aPTT"]
         },
@@ -1524,7 +1524,7 @@ export const translations = {
           fasting: "ફાસ્ટિંગ જરૂરી નથી",
           tat: "તે જ દિવસે",
           desc: "ઇન્ફેક્શનના સચોટ તબક્કા માટે NS1 એન્ટિજેન, IgM અને IgG એન્ટિબોડી સહિતની સંપૂર્ણ ડેન્ગ્યુ પેનલ.",
-          price: "₹1600",
+          price: "₹1800",
           isPackage: true,
           includes: ["ડેન્ગ્યુ NS1 એન્ટિજેન", "ડેન્ગ્યુ IgM", "ડેન્ગ્યુ IgG"]
         },
