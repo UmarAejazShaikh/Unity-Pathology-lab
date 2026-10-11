@@ -22,7 +22,7 @@ export default function Navbar() {
 
   const activeLinks =
     pathname !== "/tests"
-      ? [{ href: "/tests", label: isGu ? "લેબ ટેસ્ટ & ભાવ પત્રક" : language === "hi" ? "लैब टेस्ट और पैकेज की कीमतें" : "Lab Test & Package Price List" }]
+      ? [{ href: "/tests", label: isGu ? "લેબ તપાસ અને ભાવ" : language === "hi" ? "लैब टेस्ट और पैकेज की कीमतें" : "Lab Test & Package Price List" }]
       : [];
 
   const labContact = {

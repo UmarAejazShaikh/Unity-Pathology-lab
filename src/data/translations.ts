@@ -1,4 +1,5 @@
 import { hindiTestNames, hindiTestDescriptions, hindiSamples, hindiFasting, hindiTurnaround, hindiIncludes } from "./hindiCatalog";
+import { simpleGujaratiTestDescriptions, simpleGujaratiTestNames, simpleGujaratiSamples, simpleGujaratiPreparation } from "./simpleGujaratiTests";
 
 const languageContent = {
   en: {
@@ -1603,6 +1604,38 @@ const languageContent = {
 // while Hindi labels are added. Keep this entry structurally complete for all routes.
 export const translations = {
   ...languageContent,
+  gu: {
+    ...languageContent.gu,
+    pathology: {
+      ...languageContent.gu.pathology,
+      badge: "લોહી અને બીજી લેબ તપાસ",
+      headline: "સરખેજ-મકરબામાં લેબ તપાસ અને ઘરે આવીને લોહીનો નમૂનો લેવાની સેવા.",
+      subheadline: "લેબમાં મશીનથી તપાસ થાય છે અને નિષ્ણાત રિપોર્ટ ચકાસે છે. રિપોર્ટ તે જ દિવસે વોટ્સએપ કે ઇમેઇલ પર મળી શકે છે.",
+      homeCollectBanner: "ઘરે લોહીની તપાસ કરાવવી છે? સરખેજ, મકરબા અને આસપાસના વિસ્તારમાં ઘરે આવીને નમૂનો લઈ શકાય છે. સમય નક્કી કરવા ફોન કે મેસેજ કરો.",
+      bookHomeBtn: "ઘરે નમૂનો લેવા માટે પૂછો",
+      popularPackagesTitle: "મુખ્ય લેબ તપાસ અને પેકેજ",
+      popularPackagesSubtitle: "નિષ્ણાતે ચકાસેલો રિપોર્ટ તે જ દિવસે વોટ્સએપ પર મળી શકે છે.",
+      onlineDiscountBadge: "ઓનલાઇન બુકિંગ પર છૂટ",
+      onlineDiscountBannerTitle: "ઓનલાઇન બુકિંગ પર છૂટ મેળવો",
+      onlineDiscountBannerDesc: "લેબ તપાસ કે ઘરે નમૂનો લેવા માટે વોટ્સએપ અથવા ફોન પર સંપર્ક કરો અને ઉપલબ્ધ છૂટ વિશે પૂછો.",
+      exploreAllTestsBtn: "બધી 30+ તપાસ અને ભાવ જુઓ",
+      searchPlaceholder: "તપાસ શોધો (જેમ કે CBC, થાયરોઇડ, ડેન્ગ્યુ)...",
+      filterAll: "બધી તપાસ",
+      filterRoutine: "સામાન્ય તપાસ",
+      filterOrgan: "કિડની, લિવર અને બીજી તપાસ",
+      filterHormonal: "થાયરોઇડ અને હોર્મોન તપાસ",
+      filterInfection: "ચેપની તપાસ",
+      filterSpecial: "ખાસ તપાસ",
+      filterPackages: "સંપૂર્ણ તપાસના પેકેજ",
+      testsList: languageContent.gu.pathology.testsList.map((test, index) => ({
+        ...test,
+        name: simpleGujaratiTestNames[test.name] ?? test.name,
+        desc: simpleGujaratiTestDescriptions[index],
+        sample: simpleGujaratiSamples[test.sample] ?? test.sample,
+        fasting: simpleGujaratiPreparation[test.fasting] ?? test.fasting,
+      })),
+    },
+  },
   hi: {
     ...languageContent.en,
     nav: {
@@ -1661,29 +1694,29 @@ export const translations = {
     },
     pathology: {
       ...languageContent.en.pathology,
-      badge: "प्रमाणित जाँच सेवाएँ",
+      badge: "खून और दूसरी लैब जाँच",
       name: "यूनिटी पैथोलॉजी लैबोरेटरी",
       ratingTitle: "5.0 ★★★★★ Google रेटिंग (60 मरीजों की समीक्षाएँ)",
-      headline: "सरखेज-मकरबा में सटीक जाँच और घर से नमूना संग्रह।",
-      subheadline: "स्वचालित विश्लेषक और विशेषज्ञ रिपोर्टिंग के साथ विश्वसनीय जाँच। रिपोर्ट उसी दिन WhatsApp या ईमेल पर पाएँ।",
-      homeCollectBanner: "घर पर रक्त जाँच चाहिए? सरखेज, मकरबा और आसपास के क्षेत्रों में नमूना संग्रह उपलब्ध है। सुबह का समय तय करने के लिए कॉल या संदेश करें।",
+      headline: "सरखेज-मकरबा में लैब जाँच और घर से खून का नमूना लेने की सुविधा।",
+      subheadline: "लैब में मशीन से जाँच होती है और विशेषज्ञ रिपोर्ट देखते हैं। रिपोर्ट उसी दिन WhatsApp या ईमेल पर मिल सकती है।",
+      homeCollectBanner: "घर पर खून की जाँच चाहिए? सरखेज, मकरबा और आसपास घर आकर नमूना लिया जा सकता है। समय तय करने के लिए कॉल या संदेश करें।",
       bookHomeBtn: "घर से नमूना लेने के लिए पूछें",
       callLabBtn: "लैब को कॉल करें (+91 63530 65009)",
       popularPackagesTitle: "मुख्य जाँच और स्वास्थ्य पैकेज",
-      popularPackagesSubtitle: "प्रमाणित रोग विशेषज्ञ की रिपोर्ट, उसी दिन WhatsApp पर डिजिटल परिणाम।",
-      onlineDiscountBadge: "ऑनलाइन बुकिंग पर विशेष ऑफ़र",
-      onlineDiscountBannerTitle: "ऑनलाइन बुकिंग पर विशेष छूट",
-      onlineDiscountBannerDesc: "सभी जाँच और पैकेज पर छूट के लिए WhatsApp या कॉल से लैब जाँच या घर से नमूना संग्रह बुक करें।",
+      popularPackagesSubtitle: "विशेषज्ञ की जाँची हुई रिपोर्ट उसी दिन WhatsApp पर मिल सकती है।",
+      onlineDiscountBadge: "ऑनलाइन बुकिंग पर छूट",
+      onlineDiscountBannerTitle: "ऑनलाइन बुकिंग पर छूट पाएँ",
+      onlineDiscountBannerDesc: "लैब जाँच या घर से नमूना लेने के लिए WhatsApp या कॉल करें और उपलब्ध छूट के बारे में पूछें।",
       exploreAllTestsBtn: "सभी 30+ जाँच और पूरी कीमत सूची देखें",
       searchPlaceholder: "जाँच खोजें (जैसे CBC, थायरॉइड, डेंगू)...",
       filterAll: "सभी जाँच",
       filterRoutine: "नियमित जाँच",
       filterDiabetes: "मधुमेह",
-      filterOrgan: "बायोकेमिस्ट्री और अंगों की जाँच",
+      filterOrgan: "किडनी, लिवर और दूसरी जाँच",
       filterHormonal: "थायरॉइड और हार्मोन",
-      filterInfection: "संक्रमण जाँच",
+      filterInfection: "इन्फेक्शन की जाँच",
       filterSpecial: "विशेष जाँच",
-      filterPackages: "संपूर्ण स्वास्थ्य पैकेज",
+      filterPackages: "पूरी जाँच के पैकेज",
       testsList: languageContent.en.pathology.testsList.map((test, index) => ({
         ...test,
         name: hindiTestNames[index],

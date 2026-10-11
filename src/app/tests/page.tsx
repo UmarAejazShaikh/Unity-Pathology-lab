@@ -43,7 +43,7 @@ function TestsCatalog() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
           <span className="text-xs font-bold text-teal-800 uppercase tracking-wider bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
-            {uiText(language, "ટેસ્ટ ડિરેક્ટરી", "Test Catalog")}
+            {uiText(language, "તપાસની યાદી", "Test Catalog")}
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             {t.pathology.popularPackagesTitle}
@@ -90,7 +90,7 @@ function TestsCatalog() {
               language === "hi"
                 ? `नमस्ते यूनिटी पैथोलॉजी लैब, मुझे '${test.name}' जाँच के बारे में जानकारी चाहिए।`
                 : isGu
-                ? `નમસ્તે યુનિટી પેથોલોજી લેબ, મારે '${test.name}' ટેસ્ટ અંગે પૂછપરછ કરવી છે.`
+                ? `નમસ્તે યુનિટી પેથોલોજી લેબ, મારે '${test.name}' ટેસ્ટ અંગે માહિતી લેવી છે.`
                 : `Hello Unity Pathology Laboratory, I would like to inquire about the '${test.name}' test.`
             )}`;
 
@@ -123,7 +123,7 @@ function TestsCatalog() {
 
                   {test.isPackage && (
                     <span className="inline-block text-[10px] font-bold text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-md">
-                      {uiText(language, "ફૂલ પેકેજ", "Full Package")}
+                      {uiText(language, "સંપૂર્ણ પેકેજ", "Full Package")}
                     </span>
                   )}
 
@@ -146,7 +146,7 @@ function TestsCatalog() {
 
                   <div className="pt-2 space-y-1 text-[11px] text-slate-500">
                     <p>
-                      <strong className="text-slate-700">{uiText(language, "સેમ્પલ:", "Sample:")}</strong> {test.sample}
+                      <strong className="text-slate-700">{uiText(language, "નમૂનો:", "Sample:")}</strong> {test.sample}
                     </p>
                     <p>
                       <strong className="text-slate-700">{uiText(language, "તૈયારી:", "Preparation:")}</strong> {test.fasting}
@@ -157,7 +157,7 @@ function TestsCatalog() {
                 <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-xs font-semibold text-teal-700 flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                    {uiText(language, "સેમ-ડે વોટ્સએપ", "Same-Day Report")}
+                    {uiText(language, "તે જ દિવસે વોટ્સએપ", "Same-Day Report")}
                   </span>
                   <a
                     href={testWhatsapp}
@@ -166,7 +166,7 @@ function TestsCatalog() {
                     className="px-3.5 py-1.5 bg-emerald-50 hover:bg-emerald-600 text-emerald-800 hover:text-white rounded-lg text-xs font-semibold transition-colors border border-emerald-200 flex items-center gap-1"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
-                    <span>{uiText(language, "પૂછપરછ", "Inquire")}</span>
+                    <span>{uiText(language, "માહિતી મેળવો", "Inquire")}</span>
                   </a>
                 </div>
               </div>

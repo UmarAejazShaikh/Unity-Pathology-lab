@@ -54,7 +54,7 @@ export default function PathologyPage() {
                     <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
-                <span>{language === "hi" ? "5.0 (60 Google समीक्षाएँ)" : "5.0 (60 Google Reviews)"}</span>
+                <span>{language === "gu" ? "5.0 (60 ગૂગલ અભિપ્રાય)" : language === "hi" ? "5.0 (60 Google राय)" : "5.0 (60 Google Reviews)"}</span>
               </div>
 
               <div>
@@ -62,23 +62,23 @@ export default function PathologyPage() {
                   {t.pathology.name}
                 </h1>
                 <p className="text-teal-300 text-sm sm:text-base font-semibold mt-2">
-                  {uiText(language, "ક્લિનિકલ ડાયગ્નોસ્ટિક લેબોરેટરી · મકરબા, અમદાવાદ", "Clinical Diagnostic Laboratory · Makarba, Ahmedabad")}
+                  {uiText(language, "લોહી અને બીજી તપાસની લેબ · મકરબા, અમદાવાદ", "Clinical Diagnostic Laboratory · Makarba, Ahmedabad")}
                 </p>
               </div>
 
               <p className="text-base sm:text-lg text-slate-200 font-normal leading-relaxed max-w-2xl">
-                {uiText(language, "સરખેજ અને મકરબા વિસ્તાર માટે સચોટ લોહીની તપાસ, સેમ-ડે વોટ્સએપ રિપોર્ટ્સ અને ઘરબેઠા સેમ્પલ કલેક્શનની વ્યવસ્થા.", "Clinical laboratory diagnostic services in Makarba & Sarkhej, Ahmedabad. Accurate routine blood testing, same-day digital reports, and doorstep sample collection.")}
+                {uiText(language, "સરખેજ અને મકરબામાં લોહીની તપાસ, તે જ દિવસે વોટ્સએપ પર રિપોર્ટ અને ઘરે આવીને નમૂનો લેવાની સેવા.", "Clinical laboratory diagnostic services in Makarba & Sarkhej, Ahmedabad. Accurate routine blood testing, same-day digital reports, and doorstep sample collection.")}
               </p>
 
               {/* Verified Trust Tags */}
               <div className="flex flex-wrap gap-2 pt-1">
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-teal-200 text-xs font-medium flex items-center gap-1.5">
                   <Truck className="w-3.5 h-3.5 text-teal-400" />
-                  {isGu ? "ઘરબેઠા સેમ્પલ કલેક્શન" : language === "hi" ? "घर से नमूना संग्रह" : "Home Sample Collection"}
+                  {isGu ? "ઘરે આવીને નમૂનો લેવાની સેવા" : language === "hi" ? "घर से नमूना संग्रह" : "Home Sample Collection"}
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-teal-200 text-xs font-medium flex items-center gap-1.5">
                   <FileText className="w-3.5 h-3.5 text-teal-400" />
-                  {isGu ? "સેમ-ડે વોટ્સએપ PDF" : language === "hi" ? "उसी दिन WhatsApp PDF रिपोर्ट" : "Same-Day WhatsApp PDF"}
+                  {isGu ? "તે જ દિવસે વોટ્સએપ PDF" : language === "hi" ? "उसी दिन WhatsApp PDF रिपोर्ट" : "Same-Day WhatsApp PDF"}
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-teal-200 text-xs font-medium flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-teal-400" />
@@ -95,7 +95,7 @@ export default function PathologyPage() {
                   className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-md transition-all flex items-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>{isGu ? "વોટ્સએપ પર પૂછપરછ કરો" : language === "hi" ? "व्हाट्सऐप पर पूछताछ करें" : "Inquire on WhatsApp"}</span>
+                  <span>{isGu ? "વોટ્સએપ પર માહિતી મેળવો" : language === "hi" ? "व्हाट्सऐप पर पूछताछ करें" : "Inquire on WhatsApp"}</span>
                 </a>
                 <a
                   href="tel:6353065009"
@@ -140,7 +140,7 @@ export default function PathologyPage() {
                   />
                 </div>
                 <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-white text-base">{language === "hi" ? "यूनिटी पैथोलॉजी लैब" : "Unity Pathology Lab"}</h3>
+                  <h3 className="font-bold text-white text-base">{language === "gu" ? "યુનિટી પેથોલોજી લેબ" : language === "hi" ? "यूनिटी पैथोलॉजी लैब" : "Unity Pathology Lab"}</h3>
                   <p className="text-xs text-amber-300 font-semibold">⭐ 5.0</p>
                 </div>
               </div>
@@ -150,20 +150,20 @@ export default function PathologyPage() {
                   <span className="text-teal-300 font-medium block">
                     {uiText(language, "સમય (સોમ–શનિ):", "Hours (Mon–Sat):")}
                   </span>
-                  <p className="text-white font-semibold">{language === "hi" ? "सुबह 8:00 – रात 9:00" : "8:00 AM – 9:00 PM"}</p>
+                  <p className="text-white font-semibold">{language === "gu" ? "સવારે ૮:૦૦ – રાત્રે ૯:૦૦" : language === "hi" ? "सुबह 8:00 – रात 9:00" : "8:00 AM – 9:00 PM"}</p>
                 </div>
                 <div className="space-y-1">
                   <span className="text-teal-300 font-medium block">
                     {uiText(language, "રવિવાર સમય:", "Sunday Hours:")}
                   </span>
-                  <p className="text-white font-semibold">{language === "hi" ? "सुबह 8:00 – दोपहर 2:00" : "8:00 AM – 2:00 PM"}</p>
+                  <p className="text-white font-semibold">{language === "gu" ? "સવારે ૮:૦૦ – બપોરે ૨:૦૦" : language === "hi" ? "सुबह 8:00 – दोपहर 2:00" : "8:00 AM – 2:00 PM"}</p>
                 </div>
                 <div className="space-y-1 pt-2 border-t border-slate-700">
                   <span className="text-teal-300 font-medium block">
                     {uiText(language, "સરનામું:", "Location:")}
                   </span>
                   <p className="text-slate-200">
-                    {language === "hi" ? t.pathology.addressVal : "First floor, Samir residency, 01, Sarkhej roza road, Opp. Mastanbava dargah, Makarba, Ahmedabad 382210"}
+                    {language === "en" ? "First floor, Samir residency, 01, Sarkhej roza road, Opp. Mastanbava dargah, Makarba, Ahmedabad 382210" : t.pathology.addressVal}
                   </p>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export default function PathologyPage() {
             </div>
             <div className="space-y-1">
               <h3 className="text-lg font-bold text-teal-950">
-                {uiText(language, "ઘરબેઠા લોહીના સેમ્પલ કલેક્શનની સુવિધા", "Doorstep Sample Collection Service")}
+                {uiText(language, "ઘરે આવીને લોહીનો નમૂનો લેવાની સેવા", "Doorstep Sample Collection Service")}
               </h3>
               <p className="text-xs sm:text-sm text-teal-800 leading-relaxed max-w-2xl">
                 {uiText(language, "સરખેજ, મકરબા અને નજીકના વિસ્તારો માટે હોમ સેમ્પલ કલેક્શન ઉપલબ્ધ છે. તમારા અનુકૂળ સમય માટે લેબ ડેસ્ક પર સીધો કોલ અથવા વોટ્સએપ મેસેજ કરો.", "Home blood sample collection is available across Sarkhej, Makarba, and neighboring areas. Contact the lab desk to schedule a morning collection slot.")}
@@ -204,7 +204,7 @@ export default function PathologyPage() {
       <section id="tests" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 scroll-mt-28">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="text-xs font-bold text-teal-800 uppercase tracking-wider bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
-            {uiText(language, "મુખ્ય પ્રોફાઇલ અને પેકેજ", "Diagnostic Profiles & Packages")}
+            {uiText(language, "મુખ્ય તપાસ અને પેકેજ", "Diagnostic Profiles & Packages")}
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             {t.pathology.popularPackagesTitle}
@@ -238,7 +238,7 @@ export default function PathologyPage() {
               className="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 flex-shrink-0"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>{uiText(language, "વોટ્સએપ પર ડિસ્કાઉન્ટ મેળવો", "Claim Discount on WhatsApp")}</span>
+              <span>{uiText(language, "વોટ્સએપ પર છૂટ વિશે પૂછો", "Claim Discount on WhatsApp")}</span>
             </a>
           </div>
         </div>
@@ -258,12 +258,11 @@ export default function PathologyPage() {
             .map((test) => {
               if (!test) return null;
 
-              // Keep this check aligned with all three translated preparation labels.
-              const isFastingReq = !(
-                test.fasting.toLowerCase().includes("not required") ||
-                test.fasting.includes("નથી") ||
-                test.fasting.includes("आवश्यक नहीं")
-              );
+              const isFastingReq =
+                (test.fasting.toLowerCase().includes("fasting required") ||
+                  test.fasting.includes("જરૂરી છે") ||
+                  test.fasting.includes("ज़रूरी है")) &&
+                !test.fasting.toLowerCase().includes("not required");
 
               const testWhatsapp = `https://wa.me/916353065009?text=${encodeURIComponent(
                 language === "hi"
@@ -307,7 +306,7 @@ export default function PathologyPage() {
 
                     <div className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60">
                       <Tag className="w-3 h-3 text-emerald-600" />
-                      <span>{uiText(language, "ઓનલાઇન ડિસ્કાઉન્ટ ઉપલબ્ધ", "Online Discount Available")}</span>
+                      <span>{uiText(language, "ઓનલાઇન બુકિંગ પર છૂટ છે", "Online Discount Available")}</span>
                     </div>
 
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -317,7 +316,7 @@ export default function PathologyPage() {
                     {test.includes && test.includes.length > 0 && (
                       <div className="space-y-1.5 pt-1">
                         <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                          {uiText(language, "સમાવિષ્ટ પેરામીટર્સ:", "Includes:")}
+                          {uiText(language, "શું શું તપાસાશે:", "Includes:")}
                         </p>
                         <div className="flex flex-wrap gap-1">
                           {test.includes.map((inc, incIdx) => (
@@ -334,7 +333,7 @@ export default function PathologyPage() {
 
                     <div className="pt-2 space-y-1.5 text-[11px] text-slate-500 border-t border-slate-100">
                       <p>
-                        <strong className="text-slate-700">{uiText(language, "સેમ્પલ:", "Sample:")}</strong> {test.sample}
+                        <strong className="text-slate-700">{uiText(language, "નમૂનો:", "Sample:")}</strong> {test.sample}
                       </p>
                       <div className="flex items-center gap-1.5">
                         <strong className="text-slate-700">{uiText(language, "તૈયારી:", "Preparation:")}</strong>
@@ -354,7 +353,7 @@ export default function PathologyPage() {
                   <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between gap-2">
                     <span className="text-[11px] font-semibold text-teal-700 flex items-center gap-1">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                      <span>{uiText(language, "સેમ-ડે વોટ્સએપ", "Same-Day WhatsApp")}</span>
+                      <span>{uiText(language, "તે જ દિવસે વોટ્સએપ", "Same-Day WhatsApp")}</span>
                     </span>
                     <a
                       href={testWhatsapp}
@@ -437,7 +436,7 @@ export default function PathologyPage() {
 
             <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 space-y-3">
               <h3 className="font-bold text-white text-base">
-                {uiText(language, "વોટ્સએપ પૂછપરછ", "WhatsApp Desk Inquiry")}
+                {uiText(language, "વોટ્સએપ પર માહિતી મેળવો", "WhatsApp Desk Inquiry")}
               </h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 {uiText(language, "તમારા ડૉક્ટરની પ્રિસ્ક્રિપ્શન અથવા ટેસ્ટનું નામ મોકલીને જરૂરી તૈયારી (દા.ત. ભૂખ્યા પેટે) અને સમય અંગે સીધી માહિતી મેળવો.", "Send your doctor's prescription or test list on WhatsApp to confirm fasting guidelines, report delivery times, and home visit availability.")}
@@ -450,7 +449,7 @@ export default function PathologyPage() {
                   className="flex-1 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm rounded-xl flex items-center justify-center gap-2 transition-colors shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>{uiText(language, "વોટ્સએપ પર પૂછપરછ", "Message on WhatsApp")}</span>
+                  <span>{uiText(language, "વોટ્સએપ પર માહિતી પૂછો", "Message on WhatsApp")}</span>
                 </a>
                 <a
                   href="tel:6353065009"

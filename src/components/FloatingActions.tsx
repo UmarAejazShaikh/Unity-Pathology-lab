@@ -9,7 +9,7 @@ export default function FloatingActions() {
   const { language } = useLanguage();
 
   const whatsappUrl = `https://wa.me/916353065009?text=${encodeURIComponent(
-    uiText(language, "નમસ્તે યુનિટી પેથોલોજી લેબ, મારે લેબ ટેસ્ટ / સેમ્પલ કલેક્શન અંગે પૂછપરછ કરવી છે.", "Hello Unity Pathology Lab, I want to book a blood test / home sample collection.")
+    uiText(language, "નમસ્તે યુનિટી પેથોલોજી લેબ, મારે લેબ ટેસ્ટ / સેમ્પલ કલેક્શન અંગે માહિતી લેવી છે.", "Hello Unity Pathology Lab, I want to book a blood test / home sample collection.")
   )}`;
 
   const label = uiText(language, "લેબ સાથે વોટ્સએપ", "WhatsApp Unity Lab");
