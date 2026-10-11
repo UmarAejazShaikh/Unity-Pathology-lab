@@ -2,12 +2,11 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
-export type Language = "en" | "gu";
+export type Language = "en" | "gu" | "hi";
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  toggleLanguage: () => void;
   isGu: boolean;
 }
 
@@ -19,7 +18,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const saved = localStorage.getItem("preferred_lang") as Language;
-      if (saved === "gu" || saved === "en") {
+      if (saved === "gu" || saved === "hi" || saved === "en") {
         setLanguageState(saved);
       }
     } catch {
@@ -40,24 +39,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const toggleLanguage = () => {
-    setLanguageState((prev) => {
-      const nextLang = prev === "en" ? "gu" : "en";
-      try {
-        localStorage.setItem("preferred_lang", nextLang);
-      } catch {
-        // ignore storage error
-      }
-      return nextLang;
-    });
-  };
-
   return (
     <LanguageContext.Provider
       value={{
         language,
         setLanguage,
-        toggleLanguage,
         isGu: language === "gu",
       }}
     >

@@ -1,0 +1,46 @@
+import type { Language } from "@/context/LanguageContext";
+
+const hindi: Record<string, string> = {
+  "Unity Pathology Laboratory": "यूनिटी पैथोलॉजी लैबोरेटरी",
+  "Equipped with automated clinical analyzers, barcoded safety tracking, and verified pathologist reporting. Same-day digital delivery on WhatsApp.": "स्वचालित जाँच उपकरण, बारकोड से नमूनों की पहचान और विशेषज्ञ की सत्यापित रिपोर्ट। उसी दिन व्हाट्सऐप पर डिजिटल रिपोर्ट।",
+  "Doorstep Home Sample Collection in Sarkhej & Makarba": "सरखेज और मकरबा में घर से नमूना संग्रह",
+  "Popular Profiles & Packages": "लोकप्रिय जाँच और पैकेज",
+  "View All 30+ Tests & Full Price List": "सभी 30+ जाँच और पूरी कीमत सूची देखें",
+  "Lab Location & Collection Desk": "लैब का पता और नमूना संग्रह",
+  "Book Home Collection": "घर से नमूना संग्रह बुक करें",
+  "Map": "नक्शा",
+  "Diagnostic Notice: Tests are processed using automated clinical analyzers and verified by certified pathology professionals.": "जाँच सूचना: नमूनों की जाँच स्वचालित उपकरणों से होती है और रिपोर्ट प्रमाणित पैथोलॉजी विशेषज्ञ सत्यापित करते हैं।",
+  "Hello Unity Pathology Lab, I want to book a blood test / home sample collection.": "नमस्ते यूनिटी पैथोलॉजी लैब, मैं रक्त जाँच या घर से नमूना संग्रह बुक करना चाहता/चाहती हूँ।",
+  "WhatsApp Unity Lab": "यूनिटी लैब को व्हाट्सऐप करें",
+  "Hello Unity Pathology Laboratory, I would like to inquire about blood tests / home sample collection.": "नमस्ते यूनिटी पैथोलॉजी लैब, मुझे रक्त जाँच या घर से नमूना संग्रह के बारे में जानकारी चाहिए।",
+  "Clinical Diagnostic Laboratory · Makarba, Ahmedabad": "नैदानिक जाँच लैब · मकरबा, अहमदाबाद",
+  "Clinical laboratory diagnostic services in Makarba & Sarkhej, Ahmedabad. Accurate routine blood testing, same-day digital reports, and doorstep sample collection.": "अहमदाबाद के मकरबा और सरखेज में नियमित रक्त जाँच, उसी दिन डिजिटल रिपोर्ट और घर से नमूना संग्रह की सेवा।",
+  "Hours (Mon–Sat):": "समय (सोम–शनि):",
+  "Sunday Hours:": "रविवार का समय:",
+  "Location:": "पता:",
+  "Doorstep Sample Collection Service": "घर से नमूना संग्रह सेवा",
+  "Home blood sample collection is available across Sarkhej, Makarba, and neighboring areas. Contact the lab desk to schedule a morning collection slot.": "सरखेज, मकरबा और आसपास के क्षेत्रों में घर से रक्त नमूना संग्रह उपलब्ध है। सुबह का समय तय करने के लिए लैब से संपर्क करें।",
+  "Inquire Home Collection": "घर से नमूना संग्रह के बारे में पूछें",
+  "Diagnostic Profiles & Packages": "जाँच प्रोफ़ाइल और पैकेज",
+  "Hello Unity Pathology Laboratory, I am contacting from the website. Please let me know about the online booking discount offer.": "नमस्ते यूनिटी पैथोलॉजी लैब, मैं वेबसाइट से संपर्क कर रहा/रही हूँ। कृपया ऑनलाइन बुकिंग की छूट बताएँ।",
+  "Claim Discount on WhatsApp": "व्हाट्सऐप पर छूट के बारे में पूछें",
+  "Online Discount Available": "ऑनलाइन छूट उपलब्ध है",
+  "Includes:": "शामिल जाँच:",
+  "Sample:": "नमूना:",
+  "Preparation:": "तैयारी:",
+  "Same-Day WhatsApp": "उसी दिन व्हाट्सऐप रिपोर्ट",
+  "Book with Discount": "छूट के साथ बुक करें",
+  "Lab Location & Operating Hours": "लैब का पता और समय",
+  "Open in Google Maps": "गूगल मैप्स में देखें",
+  "WhatsApp Desk Inquiry": "व्हाट्सऐप पर लैब से पूछें",
+  "Send your doctor's prescription or test list on WhatsApp to confirm fasting guidelines, report delivery times, and home visit availability.": "खाली पेट आने की जानकारी, रिपोर्ट का समय और घर से नमूना संग्रह की उपलब्धता जानने के लिए डॉक्टर की पर्ची या जाँच सूची व्हाट्सऐप पर भेजें।",
+  "Message on WhatsApp": "व्हाट्सऐप पर संदेश भेजें",
+  "Test Catalog": "जाँच सूची",
+  "Full Package": "पूरा पैकेज",
+  "Same-Day Report": "उसी दिन रिपोर्ट",
+  "Inquire": "पूछताछ करें",
+};
+
+export function uiText(language: Language, gujarati: string, english: string): string {
+  return language === "gu" ? gujarati : language === "hi" ? (hindi[english] ?? english) : english;
+}

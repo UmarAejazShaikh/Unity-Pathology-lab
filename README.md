@@ -1,6 +1,6 @@
 # Unity Pathology Laboratory
 
-Standalone profile site for Unity Pathology Laboratory (Makarba, Ahmedabad), built with Next.js 14 (App Router) and Tailwind CSS. Bilingual (English / Gujarati). Includes a full test/price list catalog at `/tests`.
+Standalone profile site for Unity Pathology Laboratory (Makarba, Ahmedabad), built with Next.js 14 (App Router) and Tailwind CSS. Available in English, Gujarati, and Hindi. Includes a full test/price list catalog at `/tests`.
 
 Hosted at [unitypathologylab.com](https://unitypathologylab.com).
 

@@ -3,6 +3,7 @@
 import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
+import { uiText } from "@/data/uiHindi";
 import { translations } from "@/data/translations";
 import { Clock, Search, CheckCircle2, MessageCircle } from "lucide-react";
 
@@ -27,9 +28,13 @@ function TestsCatalog() {
 
   const filteredTests = t.pathology.testsList.filter((test) => {
     const matchesCat = activeCategory === "All" || test.category === activeCategory;
+    const originalTest = translations.en.pathology.testsList.find((item) => item.id === test.id);
+    const query = searchQuery.toLowerCase();
     const matchesSearch =
-      test.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      test.desc.toLowerCase().includes(searchQuery.toLowerCase());
+      test.name.toLowerCase().includes(query) ||
+      test.desc.toLowerCase().includes(query) ||
+      originalTest?.name.toLowerCase().includes(query) ||
+      originalTest?.desc.toLowerCase().includes(query);
     return matchesCat && matchesSearch;
   });
 
@@ -38,7 +43,7 @@ function TestsCatalog() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
           <span className="text-xs font-bold text-teal-800 uppercase tracking-wider bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
-            {isGu ? "ટેસ્ટ ડિરેક્ટરી" : "Test Catalog"}
+            {uiText(language, "ટેસ્ટ ડિરેક્ટરી", "Test Catalog")}
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             {t.pathology.popularPackagesTitle}
@@ -82,7 +87,9 @@ function TestsCatalog() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredTests.map((test) => {
             const testWhatsapp = `https://wa.me/916353065009?text=${encodeURIComponent(
-              isGu
+              language === "hi"
+                ? `नमस्ते यूनिटी पैथोलॉजी लैब, मुझे '${test.name}' जाँच के बारे में जानकारी चाहिए।`
+                : isGu
                 ? `નમસ્તે યુનિટી પેથોલોજી લેબ, મારે '${test.name}' ટેસ્ટ અંગે પૂછપરછ કરવી છે.`
                 : `Hello Unity Pathology Laboratory, I would like to inquire about the '${test.name}' test.`
             )}`;
@@ -95,7 +102,7 @@ function TestsCatalog() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-bold text-teal-800 bg-teal-50 px-2.5 py-1 rounded-md border border-teal-100">
-                      {test.category}
+                      {categories.find((category) => category.key === test.category)?.label ?? test.category}
                     </span>
                     <span className="text-[11px] font-medium text-slate-500 flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5 text-teal-600" />
@@ -116,7 +123,7 @@ function TestsCatalog() {
 
                   {test.isPackage && (
                     <span className="inline-block text-[10px] font-bold text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-md">
-                      {isGu ? "ફૂલ પેકેજ" : "Full Package"}
+                      {uiText(language, "ફૂલ પેકેજ", "Full Package")}
                     </span>
                   )}
 
@@ -139,10 +146,10 @@ function TestsCatalog() {
 
                   <div className="pt-2 space-y-1 text-[11px] text-slate-500">
                     <p>
-                      <strong className="text-slate-700">{isGu ? "સેમ્પલ:" : "Sample:"}</strong> {test.sample}
+                      <strong className="text-slate-700">{uiText(language, "સેમ્પલ:", "Sample:")}</strong> {test.sample}
                     </p>
                     <p>
-                      <strong className="text-slate-700">{isGu ? "તૈયારી:" : "Preparation:"}</strong> {test.fasting}
+                      <strong className="text-slate-700">{uiText(language, "તૈયારી:", "Preparation:")}</strong> {test.fasting}
                     </p>
                   </div>
                 </div>
@@ -150,7 +157,7 @@ function TestsCatalog() {
                 <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-xs font-semibold text-teal-700 flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                    {isGu ? "સેમ-ડે વોટ્સએપ" : "Same-Day Report"}
+                    {uiText(language, "સેમ-ડે વોટ્સએપ", "Same-Day Report")}
                   </span>
                   <a
                     href={testWhatsapp}
@@ -159,7 +166,7 @@ function TestsCatalog() {
                     className="px-3.5 py-1.5 bg-emerald-50 hover:bg-emerald-600 text-emerald-800 hover:text-white rounded-lg text-xs font-semibold transition-colors border border-emerald-200 flex items-center gap-1"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
-                    <span>{isGu ? "પૂછપરછ" : "Inquire"}</span>
+                    <span>{uiText(language, "પૂછપરછ", "Inquire")}</span>
                   </a>
                 </div>
               </div>
